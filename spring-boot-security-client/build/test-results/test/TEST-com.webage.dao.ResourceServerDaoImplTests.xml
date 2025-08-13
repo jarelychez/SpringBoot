@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.webage.dao.ResourceServerDaoImplTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-08-12T17:18:29" hostname="LABPC" time="2.346">
+  <properties/>
+  <testcase name="findAllPurchases()" classname="com.webage.dao.ResourceServerDaoImplTests" time="2.346">
+    <failure message="com.github.tomakehurst.wiremock.common.FatalStartupException: java.lang.RuntimeException: java.io.IOException: Failed to bind to /0.0.0.0:8000" type="com.github.tomakehurst.wiremock.common.FatalStartupException">com.github.tomakehurst.wiremock.common.FatalStartupException: java.lang.RuntimeException: java.io.IOException: Failed to bind to /0.0.0.0:8000
+	at app//com.github.tomakehurst.wiremock.WireMockServer.start(WireMockServer.java:160)
+	at app//com.webage.dao.ResourceServerDaoImplTests.setup(ResourceServerDaoImplTests.java:60)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.util.concurrent.ExecutionException: java.lang.IllegalStateException: STOPPED
+		at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+		at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+		at wiremock.org.eclipse.jetty.server.Server.doStop(Server.java:490)
+		at wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+		at com.github.tomakehurst.wiremock.jetty.JettyHttpServer.stop(JettyHttpServer.java:228)
+		at com.github.tomakehurst.wiremock.WireMockServer.stop(WireMockServer.java:151)
+		at com.webage.dao.ResourceServerDaoImplTests.teardown(ResourceServerDaoImplTests.java:99)
+		... 3 more
+	Caused by: java.lang.IllegalStateException: STOPPED
+		at wiremock.org.eclipse.jetty.server.handler.ContextHandler.shutdown(ContextHandler.java:774)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+		at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+		at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+		at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+		at wiremock.org.eclipse.jetty.util.component.Graceful.shutdown(Graceful.java:146)
+		... 8 more
+Caused by: java.lang.RuntimeException: java.io.IOException: Failed to bind to /0.0.0.0:8000
+	at com.github.tomakehurst.wiremock.jetty.JettyHttpServer.start(JettyHttpServer.java:198)
+	at com.github.tomakehurst.wiremock.WireMockServer.start(WireMockServer.java:158)
+	... 4 more
+Caused by: java.io.IOException: Failed to bind to /0.0.0.0:8000
+	at wiremock.org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:344)
+	at wiremock.org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:304)
+	at wiremock.org.eclipse.jetty.server.Server.lambda$doStart$0(Server.java:402)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at wiremock.org.eclipse.jetty.server.Server.doStart(Server.java:398)
+	at wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:93)
+	at com.github.tomakehurst.wiremock.jetty.JettyHttpServer.start(JettyHttpServer.java:196)
+	... 5 more
+Caused by: java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+	at wiremock.org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:339)
+	... 20 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:18:25.394 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.webage.dao.ResourceServerDaoImplTests]: ResourceServerDaoImplTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:18:25.657 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.webage.App for test class com.webage.dao.ResourceServerDaoImplTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-08-12T13:18:26.814-04:00  INFO 8384 --- [    Test worker] c.webage.dao.ResourceServerDaoImplTests  : Starting ResourceServerDaoImplTests using Java 21.0.5 with PID 8384 (started by labadmin in C:\LabFiles\WA2511\spring-boot-security-jwt\starters\spring-boot-security-client)
+2025-08-12T13:18:26.823-04:00  INFO 8384 --- [    Test worker] c.webage.dao.ResourceServerDaoImplTests  : No active profile set, falling back to 1 default profile: "default"
+2025-08-12T13:18:29.058-04:00  INFO 8384 --- [    Test worker] c.webage.dao.ResourceServerDaoImplTests  : Started ResourceServerDaoImplTests in 2.969 seconds (process running for 5.392)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\labadmin\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/C:/Users/labadmin/.gradle/caches/modules-2/files-2.1/org.wiremock/wiremock-standalone/3.0.1/6b54f1bb43eb24530490348d26c1c3d5454af873/wiremock-standalone-3.0.1.jar!/wiremock/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+]]></system-err>
+</testsuite>
